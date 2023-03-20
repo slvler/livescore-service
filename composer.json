@@ -1,0 +1,41 @@
+{
+    "name": "slvler/livescore-service",
+    "license": "MIT",
+    "description": "live score service API for api-football.com",
+    "type": "package",
+    "authors": [
+        {
+            "name": "slvler",
+            "email": "slvler@proton.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "slvler\\LiveScoreService\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "slvler\\LiveScoreService\\Tests\\": "tests/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^6.18.0",
+        "phpunit/phpunit": "^9.5",
+        "guzzlehttp/guzzle": "^7.0.1"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "slvler\\LiveScoreService\\LiveScoreServiceProvider"
+            ],
+            "aliases": {
+                "LiveScore": "slvler\\LiveScoreService\\Facades\\LiveScore"
+            }
+        }
+    }
+}

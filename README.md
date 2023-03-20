@@ -1,9 +1,9 @@
 # slvler - Live Score Service
 
-[![tests](https://github.com/slvler/phone-validation/actions/workflows/tests.yml/badge.svg)](https://github.com/slvler/phone-validation/actions/workflows/tests.yml)
-[![Latest Stable Version](http://poser.pugx.org/slvler/phone-validation/v)](https://packagist.org/packages/slvler/phone-validation)
-[![Latest Unstable Version](http://poser.pugx.org/slvler/phone-validation/v/unstable)](https://packagist.org/packages/slvler/phone-validation)
-[![License](http://poser.pugx.org/slvler/phone-validation/license)](https://packagist.org/packages/slvler/phone-validation)
+[![tests](https://github.com/slvler/livescore-service/actions/workflows/tests.yml/badge.svg)](https://github.com/slvler/livescore-service/actions/workflows/tests.yml)
+[![Latest Stable Version](http://poser.pugx.org/slvler/livescore-service/v)](https://packagist.org/packages/slvler/livescore-service)
+[![Latest Unstable Version](http://poser.pugx.org/slvler/livescore-service/v/unstable)](https://packagist.org/packages/slvler/livescore-service)
+[![License](http://poser.pugx.org/slvler/livescore-service/license)](https://packagist.org/packages/slvler/livescore-service)
 
 
 Live Score Client for api-football.com

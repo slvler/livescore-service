@@ -1,6 +1,6 @@
 # slvler - Live Score Service
 
-[![tests](https://github.com/slvler/livescore-service/actions/workflows/test.yml/badge.svg)](https://github.com/slvler/livescore-service/actions/workflows/test.yml)
+[![tests](https://github.com/slvler/livescore-service/actions/workflows/Tests.yml/badge.svg)](https://github.com/slvler/livescore-service/actions/workflows/Tests.yml)
 [![Latest Stable Version](http://poser.pugx.org/slvler/livescore-service/v)](https://packagist.org/packages/slvler/livescore-service)
 [![Latest Unstable Version](http://poser.pugx.org/slvler/livescore-service/v/unstable)](https://packagist.org/packages/slvler/livescore-service)
 [![License](http://poser.pugx.org/slvler/livescore-service/license)](https://packagist.org/packages/slvler/livescore-service)

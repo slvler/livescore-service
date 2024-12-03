@@ -1,11 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
-namespace slvler\LiveScoreService\Api;
+namespace Slvler\LiveScoreService\Api;
 
-use slvler\LiveScoreService\LiveScoreClient;
-use slvler\LiveScoreService\Message\ResponseTransformer;
-use Exception;
+use Slvler\LiveScoreService\LiveScoreClient;
+use Slvler\LiveScoreService\Message\ResponseTransformer;
 
 class Api
 {
@@ -18,12 +18,11 @@ class Api
         $this->client = $client;
     }
 
-    public function get(string $uri,  array $option = [])
+    public function get(string $uri, array $option = [])
     {
-        $response = $this->client->getHttpClient()->request("GET", $uri , $option);
+        $response = $this->client->getHttpClient()->request('GET', $uri, $option);
         $this->transformer = new ResponseTransformer($response);
+
         return $this->transformer->toArray();
     }
-
-
 }

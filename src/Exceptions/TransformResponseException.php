@@ -2,11 +2,8 @@
 
 declare(strict_types=1);
 
-namespace slvler\LiveScoreService\Exceptions;
+namespace Slvler\LiveScoreService\Exceptions;
 
 use Exception;
 
-class TransformResponseException extends Exception
-{
-
-}
+class TransformResponseException extends Exception {}

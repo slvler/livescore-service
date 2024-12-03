@@ -1,6 +1,8 @@
 <?php
 
-namespace slvler\LiveScoreService\Api;
+declare(strict_types=1);
+
+namespace Slvler\LiveScoreService\Api;
 
 class Players extends Api
 {
@@ -10,12 +12,13 @@ class Players extends Api
     {
         $headers = [
             'x-rapidapi-host' => Setting::getBaseUrl(),
-            "x-rapidapi-key" => Setting::getApiKey()
+            'x-rapidapi-key' => Setting::getApiKey(),
         ];
+
         return $this->get('/players/seasons', [
             'base_uri' => 'https://v3.football.api-sports.io',
             'headers' => $headers,
-            'query' => $params
+            'query' => $params,
         ]);
     }
 
@@ -23,13 +26,13 @@ class Players extends Api
     {
         $headers = [
             'x-rapidapi-host' => Setting::getBaseUrl(),
-            "x-rapidapi-key" => Setting::getApiKey()
+            'x-rapidapi-key' => Setting::getApiKey(),
         ];
 
         return $this->get('/players', [
             'base_uri' => 'https://v3.football.api-sports.io',
             'headers' => $headers,
-            'query' => $params
+            'query' => $params,
         ]);
     }
 
@@ -37,13 +40,13 @@ class Players extends Api
     {
         $headers = [
             'x-rapidapi-host' => Setting::getBaseUrl(),
-            "x-rapidapi-key" => Setting::getApiKey()
+            'x-rapidapi-key' => Setting::getApiKey(),
         ];
 
         return $this->get('/players/squads', [
             'base_uri' => 'https://v3.football.api-sports.io',
             'headers' => $headers,
-            'query' => $params
+            'query' => $params,
         ]);
     }
 
@@ -51,12 +54,13 @@ class Players extends Api
     {
         $headers = [
             'x-rapidapi-host' => Setting::getBaseUrl(),
-            "x-rapidapi-key" => Setting::getApiKey()
+            'x-rapidapi-key' => Setting::getApiKey(),
         ];
+
         return $this->get('/players/topscorers', [
             'base_uri' => 'https://v3.football.api-sports.io',
             'headers' => $headers,
-            'query' => $params
+            'query' => $params,
         ]);
     }
 
@@ -64,12 +68,13 @@ class Players extends Api
     {
         $headers = [
             'x-rapidapi-host' => Setting::getBaseUrl(),
-            "x-rapidapi-key" => Setting::getApiKey()
+            'x-rapidapi-key' => Setting::getApiKey(),
         ];
+
         return $this->get('/players/topassists', [
             'base_uri' => 'https://v3.football.api-sports.io',
             'headers' => $headers,
-            'query' => $params
+            'query' => $params,
         ]);
     }
 
@@ -77,13 +82,13 @@ class Players extends Api
     {
         $headers = [
             'x-rapidapi-host' => Setting::getBaseUrl(),
-            "x-rapidapi-key" => Setting::getApiKey()
+            'x-rapidapi-key' => Setting::getApiKey(),
         ];
 
         return $this->get('/players/topyellowcards', [
             'base_uri' => 'https://v3.football.api-sports.io',
             'headers' => $headers,
-            'query' => $params
+            'query' => $params,
         ]);
     }
 
@@ -91,15 +96,13 @@ class Players extends Api
     {
         $headers = [
             'x-rapidapi-host' => Setting::getBaseUrl(),
-            "x-rapidapi-key" => Setting::getApiKey()
+            'x-rapidapi-key' => Setting::getApiKey(),
         ];
 
         return $this->get('/players/topredcards', [
             'base_uri' => 'https://v3.football.api-sports.io',
             'headers' => $headers,
-            'query' => $params
+            'query' => $params,
         ]);
     }
-
-
 }

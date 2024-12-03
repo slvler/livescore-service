@@ -1,19 +1,31 @@
 <?php
 
-namespace slvler\LiveScoreService\Api;
+declare(strict_types=1);
+
+namespace Slvler\LiveScoreService\Api;
+
+use InvalidArgumentException;
+use Slvler\LiveScoreService\Exceptions\MissingApiKey;
 
 trait Setting
 {
-
     public static function getApiKey(): string
     {
-        return config('livescore.livescore.api_key');
+        $apiKey = config('livescore.livescore.api_key');
+        if (empty($apiKey) || ! isset($apiKey)) {
+            throw MissingApiKey::create();
+        }
+
+        return $apiKey;
     }
 
     public static function getBaseUrl(): string
     {
-        return config('livescore.livescore.base_url');
+        $baseURL = config('livescore.livescore.base_url');
+        if (empty($baseURL) || ! isset($baseURL)) {
+            throw new InvalidArgumentException('Invalid Livescore API base URL.');
+        }
+
+        return $baseURL;
     }
-
-
 }

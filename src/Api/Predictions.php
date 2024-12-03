@@ -1,6 +1,8 @@
 <?php
 
-namespace slvler\LiveScoreService\Api;
+declare(strict_types=1);
+
+namespace Slvler\LiveScoreService\Api;
 
 class Predictions extends Api
 {
@@ -10,13 +12,13 @@ class Predictions extends Api
     {
         $headers = [
             'x-rapidapi-host' => Setting::getBaseUrl(),
-            "x-rapidapi-key" => Setting::getApiKey()
+            'x-rapidapi-key' => Setting::getApiKey(),
         ];
+
         return $this->get('/predictions', [
             'base_uri' => 'https://v3.football.api-sports.io',
             'headers' => $headers,
-            'query' => $params
+            'query' => $params,
         ]);
     }
-
 }

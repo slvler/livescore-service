@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace slvler\LiveScoreService\Log;
+namespace Slvler\LiveScoreService\Log;
 
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\MessageFormatter;
@@ -12,21 +12,21 @@ use Monolog\Logger;
 
 class Record
 {
+    const logName = 'LiveScore';
 
-    CONST logName = 'LiveScore';
-    CONST logFile = 'LiveScore.log';
+    const logFile = 'LiveScore.log';
 
     public function loggered()
     {
         $logger = new Logger(self::logName);
-        $logger->pushHandler(new StreamHandler(__DIR__ . '/'. self::logFile));
+        $logger->pushHandler(new StreamHandler(__DIR__.'/'.self::logFile));
 
         $stack = HandlerStack::create();
         $stack->push(Middleware::log(
             $logger,
             new MessageFormatter('{req_body} - {res_body}')
         ));
+
         return $stack;
     }
-
 }

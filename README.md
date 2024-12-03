@@ -1,8 +1,7 @@
 # Live Score Service
 
 [![tests](https://github.com/slvler/livescore-service/actions/workflows/Tests.yml/badge.svg)](https://github.com/slvler/livescore-service/actions/workflows/Tests.yml)
-[![Latest Stable Version](https://poser.pugx.org/slvler/livescore-service/v)](https://packagist.org/packages/slvler/livescore-service)
-[![Latest Unstable Version](https://poser.pugx.org/slvler/livescore-service/v/unstable)](https://packagist.org/packages/slvler/livescore-service)
+[![Latest Stable Version](https://img.shields.io/packagist/v/slvler/livescore-service.svg)](https://packagist.org/packages/slvler/livescore-service)
 [![Total Downloads](https://poser.pugx.org/slvler/livescore-service/downloads)](https://packagist.org/packages/slvler/livescore-service)
 [![License](https://poser.pugx.org/slvler/livescore-service/license)](https://packagist.org/packages/slvler/livescore-service)
 
@@ -10,23 +9,22 @@ Live Score Client for api-football.com
 
 Welcome to Api-Football! You can use our API to access all API endpoints, which can get information about Football Leagues & Cups.
 
+## Requirements
+- PHP 8.1
+- Laravel 9.x | 10.x
+
 ## Installation
-
 To install this package tou can use composer:
-
 ```bash
 composer require slvler/livescore-service
 ```
+
 ## Usage
-
 - First, you should extract the config/livescore.php file to the config folder.
-
 ```php
 php artisan vendor:publish --tag=livescore
 ```
-
 - API key to be obtained from api-football.com address should be declared. This is your private API key, specific to this API.
-
 ```php
 'livescore' => [
     'base_url' => 'v3.football.api-sports.io',
@@ -38,7 +36,7 @@ php artisan vendor:publish --tag=livescore
 
 ### Example
 ```php
-use slvler\LiveScoreService\LiveScoreClient;
+use Slvler\LiveScoreService\LiveScoreClient;
 
 $client = new LiveScoreClient();
 ```
@@ -370,16 +368,16 @@ $client->odds()->getOddsBets();
 ```
 
 ### Testing
-
 ```bash
     composer test
 ```
 
 ## Credits
-
 - [slvler](https://github.com/slvler)
 
 ## License
-
 The MIT License (MIT). Please see [License File](https://github.com/slvler/btcturk-api/blob/main/LICENSE) for more information.
 
+## Contributing
+You're very welcome to contribute.
+Please see [CONTRIBUTING](https://github.com/slvler/phone-validation/blob/main/CONTRIBUTING.md) for details.
